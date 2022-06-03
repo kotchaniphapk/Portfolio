@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kotchanipha Pk</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Josefin Sans', sans-serif;
+        box-sizing: border-box;
+      }
+
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-image: url(assets/cover2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .logo {
+        color: white;
+        font-size: 40px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+        
+      span {
+        color:#f9004d;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-self: space-between;
+        padding-top: 45px;
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 25px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      nav ul li a:hover {
+        color:#f9004d;
+        transition: 3s;
+      }
+      .btn {
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: transform .4s;
+        
+      }
+      .btn:hover {
+        transform: scale(1.2);
+
+      }
+        /*content*/
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+      }
+      h1 {
+        color: white;
+        margin: 20px 0 20px;
+        font-size: 70px;
+      }
+      h3 {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      h4 {
+        color: #fcfc;
+        letter-spacing: 2px;
+        font-size: 20px;
+      }
+      .newlatter {
+      width: 380px;
+      max-width: 100%;
+      position: relative;
+      }
+      .newlatter form input:first-child {
+        display: inline-block;
+        width: 100%;
+        padding: 14px 130px 14px 15px;
+        border:2px solid #f9004d;
+        outline: none;
+        border-radius: 30px;
+
+      }
+      .newlatter form input:last-child {
+        position: absolute;
+        display: inline-block;
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: transform .3s;
+        outline: none ;
+        top:6px ;
+        right:8px;
+      box-shadow: 0 0 5px #000,0 0 15px #858585;
+      }
+      .newlatter form input:last-child:hover{
+        transform: scale(1.1);
+      }
+      /*About me section */
+      .about {
+        width: 100%;
+        padding:100px 0px;
+
+        background-color: #191919;
+      }
+      .about img {
+        height: auto;
+        width: 530px;
+      }
+      .about-text {
+        width: 550px;
+      }
+      .main {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .about-text h2 {
+        color: white;
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+       
+      }
+      
+      .about-text h5 {
+        color:white;
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+      }
+      .about-text p {
+        color:#fcfc;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 45px;
+        line-height: 28px;
+      }
+      .about-text button {
+        background-color: #f9004d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 10px 25px;
+        border-radius: 30px;
+        transition: transform .4s;
+
+      }
+      .about-text button:hover {
+       background-color: transparent;
+       border:2px solid #f9004d;
+       cursor: pointer; 
+      }
+      /*Hobby Section*/
+      .myhobby {
+        background-color: #101010;
+        width: 100%;
+        padding: 100px;
+      }
+      .title h2 {
+        color: white;
+        font-size: 75px;
+        width: 1130px;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .card-box {
+	      display: flex;
+	      align-items: center;
+        justify-content:center;
+	      min-height: 200px;
+      }
+      .card {
+        height: 465px;
+        width: 352px;
+        padding: 20px 35px;
+        background: #191919;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .card i {
+        color: #f9004d;
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0px;  
+      }
+      h5  {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 15px;
+      }
+    .pra p  {
+      color: #fcfc;
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 25px;
+    }
+
+    .pra img {
+      border-radius: 1rem;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px,rgba(238, 232, 232) 
+    }
+    /*My skils*/
+       .myskils {
+        background-color: #191919;
+        width: 100%;
+        padding: 70px;
+        background-image:url(assets/myskills22.jpg);
+      }
+       .title h2 {
+        color: white;
+        font-size: 75px;
+        width: 1130px;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .card-box-skils {
+	      display: flex;
+	      align-items:center;
+        justify-content:center;
+	      min-height: 200px;
+      }
+      .card-skils {
+        height: 365px;
+        width: 635px;
+        padding: 20px 35px;
+        background: #f9004d;
+        border-radius: 20px;
+        margin: 15px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .card i {
+        color: #f9004d;
+        font-size: 50px;
+        display: block;
+       
+        margin: 25px 0px;  
+      }
+      h5  {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 15px;
+      }
+    .pra1 p  {
+      color:white;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+     .pra1 ul li {
+        
+        padding: 10px 20px;
+      }
+      .pra1 ul li a {
+        color: white;
+        font-weight: bold;
+        
+    }
+      /*Contact-me*/
+         .contact-me {
+      width: 100%;
+      height: 290px;
+      background: #101010;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-me p {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+    .contact-me .button-two {
+      background-color:#f9004d;
+      color: white;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 13px 30px;
+      border-radius: 30px;
+      transition: .4s; 
+    }
+    .contact-me .button-two:hover{
+      background-color: transparent;
+      border: 2px solid #f9004d;
+      cursor: pointer;
+    }
+  /*footer Section*/
+    footer{
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: #191919;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    footer p:nth-child(1) {
+      font-size: 30px;
+      color: white;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    footer p:nth-child(2) {
+      color: white;
+      font-size: 17px;
+      width: 500px;
+      text-align: center;
+      line-height: 26px;
+    }
+    .social   {
+      display: flex;
+    }
+    .social a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:  #f9004d;
+      border-radius: 50%;
+      margin: 22px 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .social a:hover {
+      transform: scale(1.3);
+      transition: .3s; 
+    } 
+    .end {
+      position: absolute;
+      color:#f9004d;
+      bottom: 35px;
+      font-size: 14px; 
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <!--hero Section Start-->
+    <div class="hero">
+      <nav>
+        <h2 class="logo">Portfo<span>lio</span></h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Hobby</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <a href="#" class="btn">Subscribe</a>
+      </nav>
+      <div class="content">
+        <h4>Hello, My name is. . .</h4>
+        <h1>Kotchanipha <span>PK</span></h1>
+        <h3>I am an Engineer</h3>
+        <div class="newlatter">
+          <form>
+            <input type="email" name="email" id="mail" placeholder="Enter Your Email">
+            <input type="submit"name="submit" value="Let's Start">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--About Me Section-->
+    <section class="about">
+      <div class="main">
+        <img src="https://i.ibb.co/7r7dZ78/aboutme2.jpg" href="https://ibb.co/qmb3cbX" alt="aboutme2" border="0">
+        <div class="about-text">
+          <h2>About Me </h2>
+          <h5>Instrumentation & <span> Automation</span></h5>
+          <p>I'm an engineer with experience in SCADA, PLC, HMI, 
+            and inspection vision.Previously focused on automation part feeders, CC-Link, 
+            and HMI design.Vendor/device experience with Keyence, Mitsubishi, and Siemens
+            industrial control systems. Software experience with GT Designer and SolidWorks and Interested in Website development,Javascript,Css,Html.</p>
+          <button type="button">Let's Talk</button>
+        </div>
+      </div>
+    </section>
+        <!-- hobby Section-->
+    <div class="myhobby">
+      <div class="title">
+        <h2>My Hobby</h2>
+      </div>
+            <div class="card-box">
+              <div class="card">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h5>Coffee Lism</h5>
+                  <div class="pra">
+                    <p>I would like to drink and interested in Coffee beans and research, test the taste of coffee beans in each country</p>
+                   <img src="https://i.ibb.co/n0dpTps/coffee-hobby.jpg"  href="https://ibb.co/hMQ0k0R"alt="coffee-hobby" border="0"height="200" width="200">
+
+                    <p style="text-align:center">
+                      <a class="button" href="#">Read more</a>
+                    </p>   
+                </div>
+              </div>
+              <div class="card">
+                <i class="fa-solid fa-robot"></i>
+                <h5>Technology</h5>
+                <div class="pra">
+                  <p>I have an interest in technology. new innovations in the world ,robotics, machines, automation systems, uxui</p>
+                 <img src="https://i.ibb.co/SKkJ4vh/machine-hobby1.jpg" href="https://ibb.co/zS3NTfy" alt="machine-hobby1" border="0"height="200" width="200">
+
+                  <p style="text-align:center">
+                    <a class="button" href="#">Read more</a>
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fa-solid fa-plane-departure"></i>
+                <h5>Travel</h5>
+                <div class="pra">
+                  <p>I like to travel and like the culture food and people want to discover countries around the world </p>
+                  <img src="https://i.ibb.co/ZhBGqV7/photo-2022-04-06-13-48-22.jpg" href="https://ibb.co/Bgyc0tF" alt="photo-2022-04-06-13-48-22" border="0" height="200" width="200">
+        
+                  <p style="text-align:center">
+                    <a class="button" href="#">Read more</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+    </div>
+      <!-- skils Section-->
+      <div class="myskils">
+        <div class="title">
+          <h2>My Sk<span>ill</span>s</h2>
+        </div>
+        <div class="card-box-skils">
+          <div class="card-skils">
+            <h5></h5>
+            <div class="pra1">
+                <nav class="nav1">
+                  <ul>
+                    <li><a href="#"> - Experience in SCADA, PLC, HMI and inspection vision.</a></li>
+                    <li><a href="#"> - Previously focused on automation part feeders and industrial control systems. </a></li>
+                    <li><a href="#"> - CC-Link and HMI design </a></li>
+                    <li><a href="#"> - Endor/device experience with Keyence, Mitsubishi, and Siemens </a></li>
+                    <li><a href="#"> - Software experience with GT Designer and SolidWorks </a></li>
+                    <li><a href="#"> - Interested in Website development,Javascript,Css,Html.</a></li>
+                  </ul>
+                </nav>  
+            
+               
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+        <!------Contact Me------>
+        <div class="contact-me">
+          <p>Let me be a part of your company's development.</p>
+          <a class="button-two" href="#">Hire Me</a>
+        </div>
+        <!------footer start--------->
+        <footer>
+          <p>Kotchanipha Phatcharasirapaphakul</p>
+          <p> Please click on the link below to subscribe to my world:</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-file-arrow-down"></i></a>
+          </div>
+          <p class="end">CopyRight By Kotchanipha Pk</p>
+        </footer>
+  </body>
+</html> 
